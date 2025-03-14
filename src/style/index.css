@@ -1,21 +1,10 @@
 :root {
   background-color: #fcfcfc;
-}
-
-bigtitle {
-  font-family: "Impact", sans-serif;
-  font-size: 10em;
-  color: #0064e1;
-  display: block;
-  text-align: center;
-}
-
-name {
   font-family: "American Typewriter", sans-serif;
-  font-size: 1.5em;
-  color: #0064e1;
-  display: block;
-  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 

@@ -1,14 +1,16 @@
 import './style/App.css'
+import HeadtTitle from './HeadTitle'
+import Projects from "./Projects.jsx";
+import AboutMe from "./AboutMe.jsx";
 
 function App() {
 
   return (
-    <>
-      <div id="root">
-        <bigtitle>PORTFOLIO</bigtitle>
-          <name>Damien de Ryck</name>
-      </div>
-    </>
+      <>
+          <HeadtTitle />
+          <AboutMe />
+          <Projects />
+      </>
   )
 }
 
