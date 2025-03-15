@@ -1,4 +1,5 @@
 import './style/Education.css'
+import { useTranslation } from 'react-i18next';
 
 function Formation({school, diploma, begining, ending, description}) {
     return (
@@ -12,13 +13,14 @@ function Formation({school, diploma, begining, ending, description}) {
 }
 
 function Education() {
+    const { t } = useTranslation();
 
-    return(
+    return (
         <>
-            <h1>Education</h1>
+            <h1>{t('Education')}</h1>
 
             <formations>
-                <Formation school={'Lycée Bellevue'}
+                <Formation school={'Lycée Bellevue, Albi'}
                                    diploma={'Baccalauréat général'}
                                    begining={'2020'} ending={'2023'}
                                    description={'Mathematics and Physics'} />

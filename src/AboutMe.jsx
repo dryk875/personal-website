@@ -6,6 +6,8 @@ import cv_icon from './assets/cv.png';
 import mail_icon from './assets/email.png';
 import linkedin_icon from './assets/linkedin.png';
 import github_icon from './assets/github.png';
+import { useTranslation } from 'react-i18next';
+
 
 
 const Linkedin = 'https://www.linkedin.com/in/damien-deryck/?locale=en';
@@ -22,10 +24,11 @@ function Link({img, text, url}) {
 }
 
 function AboutMe() {
+    const { t } = useTranslation();
 
     return (
         <>
-            <h1>About me</h1>
+            <h1>{t('About Me')}</h1>
 
             <aboutme>
 
@@ -40,11 +43,7 @@ function AboutMe() {
                     <Link img={github_icon} url={Github} />
                 </links>
 
-                <p>
-                    Curently studying Comunication Systems at EPFL, I am passionate about technology and innovation.
-                    I am always looking for new challenges and opportunities to learn and grow.
-                    I am a team player and I am always looking for ways to improve my skills and knowledge.
-                </p>
+                <p>{t('pres')}</p>
 
 
             </aboutme>

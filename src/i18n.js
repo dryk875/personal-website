@@ -8,16 +8,16 @@ const resources = {
             "Education": "Education",
             "About Me": "About Me",
             "Projects": "Projects",
-            "Currently studying Communication Systems at EPFL, I am passionate about technology and innovation.": "Currently studying Communication Systems at EPFL, I am passionate about technology and innovation."
+            "pres": "Curently studying Comunication Systems at EPFL, I am passionate about technology and innovation. I am always looking for new challenges and opportunities to learn and grow. I am a team player and I am always looking for ways to improve my skills and knowledge."
         }
     },
     fr: {
         translation: {
             "Experience": "Expérience",
-            "Education": "Éducation",
+            "Education": "Formation",
             "About Me": "À propos de moi",
             "Projects": "Projets",
-            "Currently studying Communication Systems at EPFL, I am passionate about technology and innovation.": "Actuellement étudiant en systèmes de communication à l'EPFL, je suis passionné par la technologie et l'innovation."
+            "pres": "Actuellement étudiant en systèmes de communication à l'EPFL, je suis passionné par la technologie et l'innovation. Je suis toujours à la recherche de nouveaux défis et d'opportunités d'apprentissage et de développement. J'ai l'esprit d'équipe et je suis toujours à la recherche de moyens d'améliorer mes compétences et mes connaissances."
         }
     }
 };

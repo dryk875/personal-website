@@ -1,19 +1,23 @@
 import './style/Projects.css';
 import './style/ProjectCard.css'
+import { useTranslation } from 'react-i18next';
 
 function ProjectCard({ name, img, link }) {
     return (
+        <a href={link}>
         <div className="card">
             <h2>{name}</h2>
-            <a href={link}>Learn more</a>
         </div>
+        </a>
     );
 }
 
 function Projects() {
-    return(
+    const { t } = useTranslation();
+
+    return (
         <>
-            <h1>Projects</h1>
+            <h1>{t('Projects')}</h1>
 
             <div className="cards">
                 <ProjectCard name="HashAudit" link="" />
