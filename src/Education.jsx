@@ -23,11 +23,11 @@ function Education() {
                 <Formation school={'Lycée Bellevue, Albi'}
                                    diploma={'Baccalauréat général'}
                                    begining={'2020'} ending={'2023'}
-                                   description={'Mathematics and Physics'} />
+                                   description={t('highschooldesc')} />
                 <Formation school={'EPFL'}
-                           diploma={'Bachelor of science in Communication Systems'}
+                           diploma={t('bsc')}
                            begining={'2023'} ending={'2027'}
-                           description={'Computer science, Mathematics and Physics'} />
+                           description={t('bscdesc')} />
             </formations>
 
         </>
