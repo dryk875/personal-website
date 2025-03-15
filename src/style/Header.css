@@ -7,9 +7,9 @@ header {
     align-items: center;
     background: linear-gradient(to bottom,
     rgba(252, 252, 252, 1) 0%,
-    rgba(252, 252, 252, 0.9) 20%,
-    rgba(252, 252, 252, 0.8) 40%,
-    rgba(252, 252, 252, 0.7) 60%,
+    rgba(252, 252, 252, 0.975) 20%,
+    rgba(252, 252, 252, 0.925) 40%,
+    rgba(252, 252, 252, 0.8) 60%,
     rgba(252, 252, 252, 0) 100%);
     position: fixed;
     top: 0;

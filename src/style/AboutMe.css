@@ -1,0 +1,12 @@
+aboutme {
+    display: flex;
+    flex-direction: row;
+}
+
+links {
+    display: flex;
+    flex-direction: column;
+    width: 20vh;
+    height: 20vh;
+    gap: 1em;
+}
