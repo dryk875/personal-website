@@ -21,11 +21,11 @@ function Education() {
                 <Formation school={'Lycée Bellevue'}
                                    diploma={'Baccalauréat général'}
                                    begining={'2020'} ending={'2023'}
-                                   description={'Maths Physique'} />
+                                   description={'Mathematics and Physics'} />
                 <Formation school={'EPFL'}
-                           diploma={'Bachelor en Systèmes de Communication'}
+                           diploma={'Bachelor of science in Communication Systems'}
                            begining={'2023'} ending={'2027'}
-                           description={'Informatique, Mathématiques, Physique'} />
+                           description={'Computer science, Mathematics and Physics'} />
             </formations>
 
         </>

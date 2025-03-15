@@ -1,10 +1,13 @@
-function Experience() {
+import { useTranslation } from 'react-i18next';
 
-    return(
+function Experience() {
+    const { t } = useTranslation();
+
+    return (
         <>
-            <h1>Experience</h1>
+            <h1>{t('Experience')}</h1>
         </>
-    )
+    );
 }
 
 export default Experience;

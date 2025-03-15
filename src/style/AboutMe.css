@@ -3,22 +3,18 @@ aboutme {
     flex-direction: row;
     font-size: 1.25em;
     text-align: left;
+    align-items: center;
 }
 
-me {
-    display: flex;
-    flex-direction: column;
-    width: 60vh;
-    height: 60vh;
+me img {
+    height: 20em;
 }
 
 links {
-    margin: 3em;
+    margin: 2em;
     display: flex;
     flex-direction: column;
-    width: 20vh;
-    height: 20vh;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .icon img {

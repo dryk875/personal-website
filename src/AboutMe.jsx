@@ -33,18 +33,20 @@ function AboutMe() {
                     <img src={me} alt="Damien de Ryck" />
                 </me>
 
-                <p>
-                    Curently studying Comunication Systems at EPFL, I am passionate about technology and innovation.
-                    I am always looking for new challenges and opportunities to learn and grow.
-                    I am a team player and I am always looking for ways to improve my skills and knowledge.
-                </p>
-
                 <links>
                     <Link img={cv_icon} url={CV_English} />
                     <Link img={mail_icon} url={Mail} />
                     <Link img={linkedin_icon} url={Linkedin} />
                     <Link img={github_icon} url={Github} />
                 </links>
+
+                <p>
+                    Curently studying Comunication Systems at EPFL, I am passionate about technology and innovation.
+                    I am always looking for new challenges and opportunities to learn and grow.
+                    I am a team player and I am always looking for ways to improve my skills and knowledge.
+                </p>
+
+
             </aboutme>
         </>
     );

@@ -1,7 +1,9 @@
 import '../style/Header.css';
 import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+    const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [selectedFlag, setSelectedFlag] = useState('🇬🇧');
     const accordionRef = useRef(null);
@@ -10,8 +12,9 @@ function Header() {
         setIsOpen(!isOpen);
     };
 
-    const selectFlag = (flag) => {
+    const selectFlag = (flag, lang) => {
         setSelectedFlag(flag);
+        i18n.changeLanguage(lang);
         setIsOpen(false);
     };
 
@@ -32,16 +35,20 @@ function Header() {
         <>
             <header>
                 <nav>
-                    <h2><a href='#aboutme'>About Me</a></h2>
-                    <h2><a href='#projects'>Projects</a></h2>
-                    <h2><a href='#education'>Education</a></h2>
+                    <h2><a href='#aboutme'>{i18n.t('About Me')}</a></h2>
+                    <h2><a href='#projects'>{i18n.t('Projects')}</a></h2>
+                    <h2><a href='#education'>{i18n.t('Education')}</a></h2>
                 </nav>
                 <div className="accordion" ref={accordionRef}>
                     <button onClick={toggleAccordion} className="accordion-button">{selectedFlag}</button>
                     {isOpen && (
                         <div className="accordion-content">
-                            <div className="flag-option" onClick={() => selectFlag('🇬🇧')}>🇬🇧 English</div>
-                            <div className="flag-option" onClick={() => selectFlag('🇫🇷')}>🇫🇷 Français</div>
+                            <div className="flag-option" onClick={() => selectFlag('🇬🇧', 'en')}>
+                                🇬🇧&nbsp;English
+                            </div>
+                            <div className="flag-option" onClick={() => selectFlag('🇫🇷', 'fr')}>
+                                🇫🇷&nbsp;Français
+                            </div>
                         </div>
                     )}
                 </div>
