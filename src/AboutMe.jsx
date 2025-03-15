@@ -3,6 +3,9 @@ import './style/AboutMe.css';
 import CV_English from './assets/CV_English.pdf';
 import me from './assets/me.png';
 import cv_icon from './assets/cv.png';
+import mail_icon from './assets/email.png';
+import linkedin_icon from './assets/linkedin.png';
+import github_icon from './assets/github.png';
 
 
 const Linkedin = 'https://www.linkedin.com/in/damien-deryck/?locale=en';
@@ -12,7 +15,10 @@ const Mail = 'mailto:damien.deryck@epfl.ch'
 function Link({img, text, url}) {
     return (
         <button>
-            <a href={url} target="_blank">{img}{text}</a>
+            <a href={url} target="_blank">
+                <div className='icon'><img src={img} alt={text} /></div>
+                {text}
+            </a>
         </button>
     )
 }
@@ -37,18 +43,9 @@ function AboutMe() {
 
                 <links>
                     <Link img={cv_icon} text='Download my CV' url={CV_English} />
-                    <button>
-                        <a href={CV_English} target="_blank">Download my CV</a>
-                    </button>
-                    <button>
-                        <a href={Mail} target="_blank">Contact Me</a>
-                    </button>
-                    <button>
-                        <a href={Linkedin} target="_blank">LinkedIn</a>
-                    </button>
-                    <button>
-                        <a href={Github} target="_blank">GitHub</a>
-                    </button>
+                    <Link img={mail_icon} text={'Contact Me'} url={Mail} />
+                    <Link img={linkedin_icon} text='LinkedIn' url={Linkedin} />
+                    <Link img={github_icon} text='GitHub' url={Github} />
                 </links>
             </aboutme>
         </>
