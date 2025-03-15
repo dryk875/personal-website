@@ -3,6 +3,13 @@ aboutme {
     flex-direction: row;
 }
 
+me {
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: 60vh;
+}
+
 links {
     display: flex;
     flex-direction: column;

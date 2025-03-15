@@ -3,6 +3,7 @@ import './style/AboutMe.css';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import CV_English from './assets/CV_English.pdf';
+import me from './assets/me.png';
 
 
 const Linkedin = 'https://www.linkedin.com/in/damien-deryck/?locale=en';
@@ -15,6 +16,10 @@ function AboutMe() {
             <h1>About me</h1>
 
             <aboutme>
+
+                <me>
+                    <img src={me} alt="Damien de Ryck" />
+                </me>
 
                 <p>
                     Curently studying Comunication Systems at EPFL, I am passionate about technology and innovation.

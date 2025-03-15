@@ -17,10 +17,12 @@ function Header() {
     return (
         <>
             <header>
-                <h2>About Me</h2>
-                <h2>Projects</h2>
-                <h2>Experience</h2>
-                <h2>Education</h2>
+                <nav>
+                    <h2><a href='#aboutme'>About Me</a></h2>
+                    <h2><a href='#projects'>Projects</a></h2>
+                    <h2><a href='#experience'>Experience</a></h2>
+                    <h2><a href='#education'>Education</a></h2>
+                </nav>
                 <div className="accordion">
                     <button onClick={toggleAccordion} className="accordion-button">{selectedFlag}</button>
                     {isOpen && (
