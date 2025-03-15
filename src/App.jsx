@@ -13,6 +13,16 @@ function App() {
 
     useSectionObserver(sections);
 
+    useEffect(() => {
+        const path = window.location.pathname.slice(1); // Get the section name from the URL
+        if (sections.includes(path)) {
+            const element = document.getElementById(path);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [sections]);
+
     return (
         <>
             <Header />
