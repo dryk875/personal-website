@@ -20,7 +20,6 @@ function Header() {
                 <nav>
                     <h2><a href='#aboutme'>About Me</a></h2>
                     <h2><a href='#projects'>Projects</a></h2>
-                    <h2><a href='#experience'>Experience</a></h2>
                     <h2><a href='#education'>Education</a></h2>
                 </nav>
                 <div className="accordion">

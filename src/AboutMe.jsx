@@ -2,10 +2,20 @@ import React from 'react';
 import './style/AboutMe.css';
 import CV_English from './assets/CV_English.pdf';
 import me from './assets/me.png';
+import cv_icon from './assets/cv.png';
 
 
 const Linkedin = 'https://www.linkedin.com/in/damien-deryck/?locale=en';
 const Github = 'https://github.com/dryk875'
+const Mail = 'mailto:damien.deryck@epfl.ch'
+
+function Link({img, text, url}) {
+    return (
+        <button>
+            <a href={url} target="_blank">{img}{text}</a>
+        </button>
+    )
+}
 
 function AboutMe() {
 
@@ -26,8 +36,12 @@ function AboutMe() {
                 </p>
 
                 <links>
+                    <Link img={cv_icon} text='Download my CV' url={CV_English} />
                     <button>
                         <a href={CV_English} target="_blank">Download my CV</a>
+                    </button>
+                    <button>
+                        <a href={Mail} target="_blank">Contact Me</a>
                     </button>
                     <button>
                         <a href={Linkedin} target="_blank">LinkedIn</a>
