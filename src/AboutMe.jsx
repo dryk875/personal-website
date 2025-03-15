@@ -3,6 +3,10 @@ import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import CV_English from './assets/CV_English.pdf';
 
+
+const Linkedin = 'https://www.linkedin.com/in/damien-deryck/?locale=en';
+const Github = 'https://github.com/dryk875'
+
 function AboutMe() {
     return (
         <>
@@ -11,6 +15,12 @@ function AboutMe() {
                 <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
                     <Viewer fileUrl={CV_English} />
                 </Worker>
+                <button>
+                    <a href={Linkedin}>Linkedin</a>
+                </button>
+                <button>
+                    <a href={Github}>Github</a>
+                </button>
             </div>
         </>
     );
