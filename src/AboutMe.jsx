@@ -1,7 +1,5 @@
 import React from 'react';
 import './style/AboutMe.css';
-import { Worker, Viewer } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
 import CV_English from './assets/CV_English.pdf';
 import me from './assets/me.png';
 
@@ -28,14 +26,14 @@ function AboutMe() {
                 </p>
 
                 <links>
-                    <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}>
-                        <Viewer fileUrl={CV_English} />
-                    </Worker>
                     <button>
-                        <a href={Linkedin}>Linkedin</a>
+                        <a href={CV_English} target="_blank">Download my CV</a>
                     </button>
                     <button>
-                        <a href={Github}>Github</a>
+                        <a href={Linkedin} target="_blank">LinkedIn</a>
+                    </button>
+                    <button>
+                        <a href={Github} target="_blank">GitHub</a>
                     </button>
                 </links>
             </aboutme>

@@ -13,12 +13,22 @@ header {
     rgba(252, 252, 252, 0) 100%);
     position: fixed;
     top: 0;
+}
+
+a {
+    text-decoration: none;
     color: #0014e1;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
     gap: 3em;
 }
 
 .accordion {
-    position: relative;
+    position: fixed;
+    right: 10vh;
 }
 
 .accordion-button {

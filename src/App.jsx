@@ -17,7 +17,6 @@ function App() {
           <HeadtTitle />
           <section id='aboutme'><AboutMe /></section>
           <section id ='projects'><Projects /></section>
-          <section id='experience'><Experience /></section>
           <section id ='education'><Education /></section>
       </>
   )

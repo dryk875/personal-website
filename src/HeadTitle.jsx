@@ -2,10 +2,10 @@ import './style/HeadTitle.css'
 
 function HeadTitle() {
     return(
-        <div id="root">
+        <headtitle>
             <bigtitle>PORTFOLIO</bigtitle>
             <name>Damien de Ryck</name>
-        </div>
+        </headtitle>
     )
 }
 

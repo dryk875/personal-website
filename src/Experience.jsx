@@ -2,7 +2,7 @@ function Experience() {
 
     return(
         <>
-            lorem ipsum
+            <h1>Experience</h1>
         </>
     )
 }
