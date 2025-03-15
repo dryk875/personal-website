@@ -1,5 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import CV_English from './assets/CV_English.pdf';
+import CV_Français from './assets/CV_Français.pdf';
 
 const resources = {
     en: {
@@ -11,7 +13,9 @@ const resources = {
             "pres": "Curently studying Comunication Systems at EPFL, I am passionate about technology and innovation. I am always looking for new challenges and opportunities to learn and grow. I am a team player and I am always looking for ways to improve my skills and knowledge.",
             "highschooldesc": "Mathematics and Physics",
             "bsc": "Bachelor of Science in Communication Systems",
-            "bscdesc": "Computer Science, Mathematics and Physics"
+            "bscdesc": "Computer Science, Mathematics and Physics",
+            "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=en",
+            "CV": CV_English
         }
     },
     fr: {
@@ -23,7 +27,9 @@ const resources = {
             "pres": "Actuellement étudiant en systèmes de communication à l'EPFL, je suis passionné par la technologie et l'innovation. Je suis toujours à la recherche de nouveaux défis et d'opportunités d'apprentissage et de développement. J'ai l'esprit d'équipe et je suis toujours à la recherche de moyens d'améliorer mes compétences et mes connaissances.",
             "highschooldesc": "Mathématiques et Physique",
             "bsc": "Bachelor en Systèmes de Communication",
-            "bscdesc": "Informatique, Mathématiques et Physique"
+            "bscdesc": "Informatique, Mathématiques et Physique",
+            "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=fr_FR",
+            "CV": CV_Français
         }
     }
 };
