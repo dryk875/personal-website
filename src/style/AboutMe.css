@@ -1,6 +1,8 @@
 aboutme {
     display: flex;
     flex-direction: row;
+    font-size: 1.25em;
+    text-align: left;
 }
 
 me {
@@ -11,6 +13,7 @@ me {
 }
 
 links {
+    margin: 3em;
     display: flex;
     flex-direction: column;
     width: 20vh;

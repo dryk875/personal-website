@@ -14,12 +14,10 @@ const Mail = 'mailto:damien.deryck@epfl.ch'
 
 function Link({img, text, url}) {
     return (
-        <button>
-            <a href={url} target="_blank">
-                <div className='icon'><img src={img} alt={text} /></div>
-                {text}
-            </a>
-        </button>
+        <a href={url} target="_blank">
+            <div className='icon'><img src={img} alt={text} /></div>
+            {text}
+        </a>
     )
 }
 
@@ -42,10 +40,10 @@ function AboutMe() {
                 </p>
 
                 <links>
-                    <Link img={cv_icon} text='Download my CV' url={CV_English} />
-                    <Link img={mail_icon} text={'Contact Me'} url={Mail} />
-                    <Link img={linkedin_icon} text='LinkedIn' url={Linkedin} />
-                    <Link img={github_icon} text='GitHub' url={Github} />
+                    <Link img={cv_icon} url={CV_English} />
+                    <Link img={mail_icon} url={Mail} />
+                    <Link img={linkedin_icon} url={Linkedin} />
+                    <Link img={github_icon} url={Github} />
                 </links>
             </aboutme>
         </>
