@@ -8,5 +8,24 @@ h1 {
 }
 
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
+button, .language-button, .accordion-button {
+  -webkit-appearance: none;
+  appearance: none;
+  color: inherit;
+  background: none;
+  border: 1px solid #111;
+}
+
+button:focus, button:active,
+.language-button:focus, .language-button:active,
+.accordion-button:focus, .accordion-button:active {
+  outline: none;
+  box-shadow: none;
+  background: #f4f4e7;
+  color: inherit;
+}
 

@@ -15,7 +15,11 @@ const resources = {
             "bsc": "Bachelor of Science in Communication Systems",
             "bscdesc": "Computer Science, Mathematics and Physics",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=en",
-            "CV": CV_En
+            "CV": CV_En,
+            "mEM": "my email",
+            "mCV": "my cv",
+            "mIN": "my linkedin",
+            "mGH": "my github"
         }
     },
     fr: {
@@ -29,7 +33,11 @@ const resources = {
             "bsc": "Bachelor en Systèmes de Communication",
             "bscdesc": "Informatique, Mathématiques et Physique",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=fr_FR",
-            "CV": CV_Fr
+            "CV": CV_Fr,
+            "mEM": "mon email",
+            "mCV": "mon cv",
+            "mIN": "mon linkedin",
+            "mGH": "mon github"
         }
     }
 };
