@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/AboutMe.css';
-import CV_English from './assets/CV_English.pdf';
-import CV_Français from './assets/CV_Français.pdf';
+import CV_English from './assets/cv_damien_de_ryck_en.pdf';
+import CV_Français from './assets/cv_damien_de_ryck_fr.pdf';
 import me from './assets/me.png';
 import cv_icon from './assets/cv.png';
 import mail_icon from './assets/email.png';

@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import CV_English from './assets/CV_English.pdf';
-import CV_Français from './assets/CV_Français.pdf';
+import CV_En from './assets/cv_damien_de_ryck_en.pdf';
+import CV_Fr from './assets/cv_damien_de_ryck_fr.pdf';
 
 const resources = {
     en: {
@@ -15,7 +15,7 @@ const resources = {
             "bsc": "Bachelor of Science in Communication Systems",
             "bscdesc": "Computer Science, Mathematics and Physics",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=en",
-            "CV": CV_English
+            "CV": CV_En
         }
     },
     fr: {
@@ -29,7 +29,7 @@ const resources = {
             "bsc": "Bachelor en Systèmes de Communication",
             "bscdesc": "Informatique, Mathématiques et Physique",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=fr_FR",
-            "CV": CV_Français
+            "CV": CV_Fr
         }
     }
 };
