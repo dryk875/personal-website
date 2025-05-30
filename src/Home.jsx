@@ -1,5 +1,5 @@
 import './style/Home.css'
-import newme from './assets/newme.png'
+import photo from './assets/photo.png'
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
@@ -32,7 +32,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="newme">
-                    <img src={newme} alt="portrait de Damien" />
+                    <img src={photo} alt="portrait de Damien" />
                 </div>
             </main>
         </>
