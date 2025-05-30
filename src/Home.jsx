@@ -24,6 +24,7 @@ function Home() {
             <main className="Layout">
                 <div className="HomeContent">
                     <div className="name">Damien<br/>de Ryck</div>
+                    <div className="position">{t('position')} <Link text="EPFL" url={t('EPFLLink')} /></div>
                     <div className="links">
                         <Link text={t('mEM')} url={Mail} />
                         <Link text={t('mCV')} url={CV} />

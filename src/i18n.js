@@ -8,6 +8,8 @@ const resources = {
         translation: {
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=en",
             "CV": CV_En,
+            "position": "Computer Science Student at ",
+            "EPFLLink": "https://www.epfl.ch/en",
             "mEM": "my email",
             "mCV": "my cv",
             "mIN": "my linkedin",
@@ -18,6 +20,8 @@ const resources = {
         translation: {
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=fr_FR",
             "CV": CV_Fr,
+            "position": "Étudiant en informatique à l'",
+            "EPFLLink": "https://www.epfl.ch/fr",
             "mEM": "mon email",
             "mCV": "mon cv",
             "mIN": "mon linkedin",
