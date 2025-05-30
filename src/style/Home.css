@@ -6,8 +6,8 @@
 }
 
 html, body {
+    overscroll-behavior: auto;
     overflow: hidden;
-    overscroll-behavior: none;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -106,7 +106,7 @@ a {
     object-fit: contain;
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) {
     html, body {
         overflow: auto;
     }
