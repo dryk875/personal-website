@@ -31,7 +31,7 @@ function Home() {
                         <Link text={t('mGH')} url={Github} />
                     </div>
                 </div>
-                <div className="newme">
+                <div className="portrait">
                     <img src={photo} alt="portrait de Damien" />
                 </div>
             </main>
