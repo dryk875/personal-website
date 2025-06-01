@@ -1,12 +1,16 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
-import '../style/ReturnHome.css'
+import { useNavigate, useLocation } from 'react-router-dom';
+import '../style/ReturnHome.css';
 
 function ReturnHome() {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleReturn = () => {
-        navigate('/');
+        const pathSegment = location.pathname.split('/');
+        const currentLang = pathSegment[pathSegment.length - 1];
+        const targetLang = currentLang === 'fr' ? 'fr' : 'en'; // Default to 'en' if not 'fr'
+        navigate(`/${targetLang}`);
     };
 
     return (

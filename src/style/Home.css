@@ -75,7 +75,7 @@ a {
         gap: 2vh;
     }
 
-    h1 {
+    .Name {
         font-size: 3em;
     }
 
@@ -124,7 +124,7 @@ a {
         position: relative;
     }
 
-    h1 {
+    .Name {
         font-size: 3.5em;
         text-align: center;
     }

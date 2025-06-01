@@ -1,22 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../style/LanguageSelector.css';
+
+const SUPPORTED_LANGUAGES = ['en', 'fr'];
 
 function LanguageSelector() {
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedLang, setSelectedLang] = useState(localStorage.getItem('language') || 'en');
+    const navigate = useNavigate();
+    const location = useLocation();
     const accordionRef = useRef(null);
 
     const toggleAccordion = () => {
-        setIsOpen(!isOpen);
+        setIsOpen((prev) => !prev);
     };
 
     const selectLang = (lang) => {
-        setSelectedLang(lang);
+        if (lang === i18n.language) return;
+
         i18n.changeLanguage(lang);
-        localStorage.setItem('language', lang); // Sauvegarde la langue dans localStorage
+        localStorage.setItem('language', lang);
         setIsOpen(false);
+
+        const pathSegments = location.pathname.split('/');
+        pathSegments[pathSegments.length - 1] = lang;
+        navigate(pathSegments.join('/'));
     };
 
     useEffect(() => {
@@ -32,29 +41,24 @@ function LanguageSelector() {
         };
     }, []);
 
-    useEffect(() => {
-        i18n.changeLanguage(selectedLang); // Applique la langue au chargement
-    }, [selectedLang, i18n]);
+    const otherLanguages = SUPPORTED_LANGUAGES.filter((lang) => lang !== i18n.language);
 
     return (
         <div className="language-selector" ref={accordionRef}>
             <button onClick={toggleAccordion} className="language-button">
-                {selectedLang}
+                {i18n.language}
             </button>
             {isOpen && (
                 <div className="language-options">
-                    <div
-                        className={`lang-option ${selectedLang === 'en' ? 'active' : ''}`}
-                        onClick={() => selectLang('en')}
-                    >
-                        en
-                    </div>
-                    <div
-                        className={`lang-option ${selectedLang === 'fr' ? 'active' : ''}`}
-                        onClick={() => selectLang('fr')}
-                    >
-                        fr
-                    </div>
+                    {otherLanguages.map((lang) => (
+                        <div
+                            key={lang}
+                            className="lang-option"
+                            onClick={() => selectLang(lang)}
+                        >
+                            {lang}
+                        </div>
+                    ))}
                 </div>
             )}
         </div>
