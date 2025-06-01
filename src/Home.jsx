@@ -3,33 +3,22 @@ import photo from './assets/photo.png'
 import React from "react";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
-
-function Link({text, url}) {
-    return (
-        <a href={url} target="_blank">
-            {text}
-        </a>
-    )
-}
+import Link from './components/Link';
 
 function Home() {
     const { t } = useTranslation();
-    const CV = t('CV');
-    const Mail = 'mailto:deryckdamien@gmail.com'
-    const Linkedin = t('linkedin_link');
-    const Github = 'https://github.com/dryk875'
     return (
         <>
             <LanguageSelector />
             <main className="Layout">
                 <div className="HomeContent">
-                    <div className="name">Damien<br/>de Ryck</div>
-                    <div className="position">{t('position')} <Link text="EPFL" url={t('EPFLLink')} /></div>
+                    <div className='Name'>Damien<br/>de Ryck</div>
+                    <div className="position">{t('position')}<Link display="EPFL" url={t('EPFLLink')} /></div>
                     <div className="links">
-                        <Link text={t('mEM')} url={Mail} />
-                        <Link text={t('mCV')} url={CV} />
-                        <Link text={t('mIN')} url={Linkedin} />
-                        <Link text={t('mGH')} url={Github} />
+                        <Link display={t('mEM')} url={'mailto:deryckdamien@gmail.com'} />
+                        <Link display={t('mCV')} url={t('CV')} />
+                        <Link display={t('mIN')} url={t('linkedin_link')} />
+                        <Link display={t('mPR')} url={'/projects'} />
                     </div>
                 </div>
                 <div className="portrait">

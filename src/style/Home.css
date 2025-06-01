@@ -1,46 +1,3 @@
-@font-face {
-    font-family: 'CloisterBlack';
-    src: url('./fonts/CloisterBlack.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-html, body {
-    overscroll-behavior: auto;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: #111;
-    background: url('//assets/texture.png') repeat fixed, #f4f4e7;
-    background-size: auto;
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-image:
-            url('//assets/texture.png'),
-            radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
-            radial-gradient(rgba(0,0,0,0.02) 0.5px, transparent 0.5px);
-    background-repeat: repeat;
-    background-size: auto, 2px 2px, 3px 3px;
-    background-attachment: fixed;
-    z-index: 0;
-    opacity: 0.7;
-    filter: contrast(120%) brightness(97%);
-    mix-blend-mode: multiply;
-}
-
-html, body {
-    height: 100%;
-}
-
 #root {
     height: 100dvh;
     display: flex;
@@ -69,10 +26,10 @@ html, body {
     position: relative;
 }
 
-.name {
+
+.Name {
+    font-weight: 700;
     font-size: 8em;
-    color: black;
-    font-family: "CloisterBlack", sans-serif;
     margin: 0;
     text-align: left;
 }
@@ -80,7 +37,6 @@ html, body {
 .position {
     font-size: 2.5em;
     color: #404040;
-    font-family: "Times New Roman", Times, serif;
     margin: 0;
     text-align: left;
 }
@@ -88,7 +44,6 @@ html, body {
 .links {
     display: flex;
     flex-direction: row;
-    font-family: "Times New Roman", Times, serif;
     gap: 0.5em;
     font-size: 2.5em;
 }
@@ -104,6 +59,7 @@ a {
     right: 5vw;
     z-index: 1;
     pointer-events: none;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
 }
 
 .portrait img {
@@ -119,7 +75,7 @@ a {
         gap: 2vh;
     }
 
-    .name {
+    h1 {
         font-size: 3em;
     }
 
@@ -168,7 +124,7 @@ a {
         position: relative;
     }
 
-    .name {
+    h1 {
         font-size: 3.5em;
         text-align: center;
     }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import '../style/LanguageSelector.css'; // tu peux mettre ça dans Home.css aussi
+import '../style/LanguageSelector.css';
 
 function LanguageSelector() {
     const { i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedLang, setSelectedLang] = useState('en');
+    const [selectedLang, setSelectedLang] = useState(localStorage.getItem('language') || 'en');
     const accordionRef = useRef(null);
 
     const toggleAccordion = () => {
@@ -15,6 +15,7 @@ function LanguageSelector() {
     const selectLang = (lang) => {
         setSelectedLang(lang);
         i18n.changeLanguage(lang);
+        localStorage.setItem('language', lang); // Sauvegarde la langue dans localStorage
         setIsOpen(false);
     };
 
@@ -30,6 +31,10 @@ function LanguageSelector() {
             document.removeEventListener('click', handleClickOutside);
         };
     }, []);
+
+    useEffect(() => {
+        i18n.changeLanguage(selectedLang); // Applique la langue au chargement
+    }, [selectedLang, i18n]);
 
     return (
         <div className="language-selector" ref={accordionRef}>
