@@ -22,7 +22,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="portrait">
-                    <img src={photo} alt="portrait de Damien" />
+                    <img src={photo} alt="damien" />
                 </div>
             </main>
         </>
