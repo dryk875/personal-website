@@ -15,6 +15,10 @@
     transform: translateY(-50%);
 }
 
+.return_button:hover {
+    text-decoration: underline;
+}
+
 .return_button:active {
     background: transparent;
 }
