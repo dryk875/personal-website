@@ -41,7 +41,8 @@ function GeneralRouter() {
     // If language is missing, redirect to path + userLang
     if (!lang) {
         const userLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
-        return <Navigate to={`/${segments.join('/')}/${userLang}`} replace />;
+        const newPath = segments.length === 0 ? `/${userLang}` : `/${segments.join('/')}/${userLang}`;
+        return <Navigate to={newPath} replace />;
     }
 
     useEffect(() => {
