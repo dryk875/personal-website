@@ -3,7 +3,7 @@
     font-size: 2em;
     padding: 0 0.3em;
     background: transparent;
-    border: 1px solid #111;
+    /*border: 1px solid #111;*/
     cursor: pointer;
     text-transform: lowercase;
     text-align: center;

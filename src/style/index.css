@@ -34,7 +34,7 @@ body::before {
 
 .Title {
   font-weight: 500;
-  font-size: 5em;
+  font-size: 4em;
   margin: 0;
   text-align: center;
   position: absolute;
@@ -46,7 +46,8 @@ button, .language-button, .accordion-button {
   appearance: none;
   color: inherit;
   background: none;
-  border: 1px solid #111;
+  /*border: 1px solid #111;*/
+  border: none;
 }
 
 button:focus, button:active,

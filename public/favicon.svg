@@ -1,0 +1,13 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="clip">
+            <rect x="0" y="0" width="100" height="100" />
+        </clipPath>
+    </defs>
+    <!-- d (partie gauche uniquement) -->
+    <text x="2" y="90" font-family="Helvetica Neue, Arial, sans-serif" font-size="120" font-weight="bold" clip-path="url(#clip)">d</text>
+    <!-- r (sans sa barre verticale) -->
+    <text x="46" y="90" font-family="Helvetica Neue, Arial, sans-serif" font-size="120" font-weight="bold" clip-path="url(#clip)">r</text>
+
+
+</svg>
