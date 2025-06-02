@@ -1,12 +1,19 @@
 <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <style>
         @media (prefers-color-scheme: dark) {
+        .bg { fill: black; }
         .txt { fill: white; }
         }
         @media (prefers-color-scheme: light) {
+        .bg { fill: white; }
         .txt { fill: black; }
         }
     </style>
+
+    <!-- Fond adaptable -->
+    <rect class="bg" x="0" y="0" width="100" height="100" rx="20" ry="20" />
+
+    <!-- Lettres -->
     <text class="txt" x="2" y="90" font-family="Helvetica Neue, Arial, sans-serif" font-size="120" font-weight="bold">d</text>
     <text class="txt" x="46" y="90" font-family="Helvetica Neue, Arial, sans-serif" font-size="120" font-weight="bold">r</text>
 </svg>
