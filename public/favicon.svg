@@ -1,13 +1,7 @@
 <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <style>
-        @media (prefers-color-scheme: dark) {
-        .bg { fill: black; }
-        .txt { fill: white; }
-        }
-        @media (prefers-color-scheme: light) {
         .bg { fill: white; }
         .txt { fill: black; }
-        }
     </style>
 
     <!-- Fond adaptable -->
