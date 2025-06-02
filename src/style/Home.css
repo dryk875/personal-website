@@ -48,11 +48,6 @@
     font-size: 2.5em;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
 .portrait {
     position: absolute;
     bottom: 0;
@@ -141,11 +136,6 @@ a {
         gap: 0.5em;
         margin-top: 0.5em;
         font-size: 1.5em;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
     }
 
     .portrait {

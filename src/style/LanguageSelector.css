@@ -31,9 +31,6 @@
     text-transform: lowercase;
 }
 
-.lang-option.active {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
 .lang-option:hover {
-    background-color: rgba(0, 0, 0, 0.1);}
+    text-decoration: underline;
+}

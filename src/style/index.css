@@ -49,6 +49,15 @@ body::before {
   }
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 button, .language-button, .accordion-button {
   -webkit-appearance: none;
   appearance: none;
