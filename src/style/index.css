@@ -25,7 +25,7 @@ body::before {
   background-size: 30px 30px;
   background-repeat: repeat;
   background-attachment: fixed;
-  z-index: 0;
+  z-index: -1;
   mix-blend-mode: multiply;
 }
 
