@@ -29,16 +29,11 @@ function Projects() {
                         url={'/projects/rechor'}
                     />
 
-
-                    <Link
-                        display={
-                            <article className="ProjectCard">
-                                <img src={HashAuditIMG} alt="HashAudit" />
-                                <h1>HashAudit</h1>
-                                <p>{t('desHashAudit')}</p>
-                            </article>}
-                        url={'/projects/hashaudit'}
-                    />
+                    <article className="ProjectCard">
+                        <img src={HashAuditIMG} alt="HashAudit" />
+                        <h1>HashAudit</h1>
+                        <p>{t('desHashAudit')}</p>
+                    </article>
 
                     <Link
                         display={

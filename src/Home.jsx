@@ -4,7 +4,6 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
 import Link from './components/Link';
-import Return from "./components/Return.jsx";
 
 function Home() {
     const { t } = useTranslation();

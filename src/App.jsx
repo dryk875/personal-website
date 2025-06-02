@@ -8,18 +8,18 @@ import {
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Error404 from "./Error404.jsx";
 import Home from './Home.jsx';
 import Projects from './Projects.jsx';
-import HashAudit from "./projects/HashAudit.jsx";
 import ICMon from "./projects/ICMon.jsx";
 import ReCHor from "./projects/ReCHor.jsx";
 
 const SUPPORTED_LANGUAGES = ['en', 'fr'];
 
 const pages = {
+    'error404': Error404,
     '': Home,
     'projects': Projects,
-    'projects/hashaudit': HashAudit,
     'projects/icmon': ICMon,
     'projects/rechor': ReCHor,
 };
@@ -50,8 +50,12 @@ function GeneralRouter() {
     }, [lang, i18n]);
 
     // Find the component to render
-    const PageComponent = pages[pathKey.toLowerCase()] || Home;
+    const PageComponent = pages[pathKey.toLowerCase()] || Error404;
 
+    // Inside GeneralRouter, after determining lang and PageComponent
+    if (PageComponent === Error404 && pathKey.toLowerCase() !== 'error404') {
+        return <Navigate to={`/error404/${lang}`} replace />;
+    }
     return <PageComponent />;
 }
 

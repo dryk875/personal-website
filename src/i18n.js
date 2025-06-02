@@ -6,6 +6,8 @@ import CV_Fr from './assets/cv_damien_de_ryck_fr.pdf';
 const resources = {
     en: {
         translation: {
+            "pNF": "Page not found",
+            "rHome": "Return to home page",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=en",
             "CV": CV_En,
             "position": "Computer Science student at ",
@@ -27,6 +29,8 @@ const resources = {
     },
     fr: {
         translation: {
+            "pNF": "Page non trouvée",
+            "rHome": "Retourner à la page d'accueil",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=fr_FR",
             "CV": CV_Fr,
             "position": "Étudiant en informatique à l'",
