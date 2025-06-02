@@ -42,6 +42,13 @@ body::before {
   top: 0;
 }
 
+@media (orientation: portrait) {
+  .Title {
+    font-size: 2em;
+    top: 2vh;
+  }
+}
+
 button, .language-button, .accordion-button {
   -webkit-appearance: none;
   appearance: none;

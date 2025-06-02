@@ -19,3 +19,9 @@
 .ProjectCard h1 {
     text-align: center;
 }
+
+@media (orientation: portrait) {
+    .ProjectsContent {
+        flex-direction: column;
+    }
+}
