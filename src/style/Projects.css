@@ -6,6 +6,10 @@
     gap: 50px;
 }
 
+.ProjectsContent a:hover {
+    text-decoration: none ;
+}
+
 .ProjectCard {
     border: 1px solid #111;
     background: white;
@@ -16,6 +20,11 @@
     box-shadow: 3px 8px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
 }
+
+.ProjectCard:hover {
+    transform: scale(1.05);
+}
+
 
 .ProjectCard h1 {
     text-align: center;
