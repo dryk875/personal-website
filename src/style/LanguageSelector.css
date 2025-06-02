@@ -2,13 +2,14 @@
     display: inline-block;
     z-index: 10;
     pointer-events: auto;
-    margin-left: auto;
-    position: relative;
+    right: 1em;
+    position: absolute;
     text-align: center;
 }
 
 .language-button {
     font-size: 2em;
+    width: 2em;
     cursor: pointer;
     text-transform: lowercase;
     text-align: center;

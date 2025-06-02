@@ -55,9 +55,10 @@ function GeneralRouter() {
 }
 
 function App() {
+    const location = useLocation();
     return (
         <Routes>
-            <Route path="*" element={<GeneralRouter />} />
+            <Route path="*" element={<GeneralRouter key={location.pathname} />} />
         </Routes>
     );
 }
