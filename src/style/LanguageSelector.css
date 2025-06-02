@@ -2,9 +2,11 @@
     display: inline-block;
     z-index: 10;
     pointer-events: auto;
-    right: 1em;
-    position: absolute;
+    right: 0;
+    position: relative;
     text-align: center;
+    padding: 1em;
+    margin-left: auto;
 }
 
 .language-button {
@@ -21,8 +23,9 @@
     width: 100%;
     font-size: 2em;
     border: none;
-    position: absolute;
     z-index: 10;
+    position: absolute;
+    left: 0;
 }
 
 .lang-option {
