@@ -2,7 +2,6 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    useParams,
     useLocation,
     Navigate,
 } from 'react-router-dom';
@@ -11,73 +10,56 @@ import { useTranslation } from 'react-i18next';
 
 import Home from './Home.jsx';
 import Projects from './Projects.jsx';
+import HashAudit from "./projects/HashAudit.jsx";
+import ICMon from "./projects/ICMon.jsx";
+import ReCHor from "./projects/ReCHor.jsx";
 
 const SUPPORTED_LANGUAGES = ['en', 'fr'];
 
 const pages = {
-    projects: Projects,
+    '': Home,
+    'projects': Projects,
+    'projects/hashaudit': HashAudit,
+    'projects/icmon': ICMon,
+    'projects/rechor': ReCHor,
 };
 
-function App() {
-    return (
-        <Routes>
-            {SUPPORTED_LANGUAGES.map((lang) => (
-                <Route key={lang} path={`/${lang}`} element={<LangRouterHome lang={lang} />} />
-            ))}
-            <Route path="/:page/:lang" element={<LangRouterPage />} />
-            <Route path="*" element={<LanguageRedirect />} />
-        </Routes>
-    );
-}
-
-function LangRouterHome({ lang }) {
+function GeneralRouter() {
+    const location = useLocation();
     const { i18n } = useTranslation();
+    const segments = location.pathname.split('/').filter(Boolean);
 
-    useEffect(() => {
-        if (SUPPORTED_LANGUAGES.includes(lang)) {
-            i18n.changeLanguage(lang);
-        }
-    }, [lang, i18n]);
+    let lang = segments[segments.length - 1];
+    let pathKey = segments.slice(0, -1).join('/');
 
-    return <Home />;
-}
-
-function LangRouterPage() {
-    const { page, lang } = useParams();
-    const { i18n } = useTranslation();
-    const PageComponent = pages[page?.toLowerCase()];
-
-    useEffect(() => {
-        if (SUPPORTED_LANGUAGES.includes(lang)) {
-            i18n.changeLanguage(lang);
-        }
-    }, [lang, i18n]);
-
-    if (!PageComponent) {
-        return <Navigate to={`/${lang}`} replace />;
-    }
-
+    // If last segment is not a supported language, treat as path
     if (!SUPPORTED_LANGUAGES.includes(lang)) {
-        const userLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
-        return <Navigate to={`/${page}/${userLang}`} replace />;
+        lang = null;
+        pathKey = segments.join('/');
     }
+
+    // If language is missing, redirect to path + userLang
+    if (!lang) {
+        const userLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
+        return <Navigate to={`/${segments.join('/')}/${userLang}`} replace />;
+    }
+
+    useEffect(() => {
+        i18n.changeLanguage(lang);
+    }, [lang, i18n]);
+
+    // Find the component to render
+    const PageComponent = pages[pathKey.toLowerCase()] || Home;
 
     return <PageComponent />;
 }
 
-function LanguageRedirect() {
-    const location = useLocation();
-    const userLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
-    const segments = location.pathname.split('/').filter(Boolean);
-
-    if (segments.length === 1) {
-        const page = segments[0].toLowerCase();
-        if (Object.keys(pages).includes(page)) {
-            return <Navigate to={`/${page}/${userLang}`} replace />;
-        }
-    }
-
-    return <Navigate to={`/${userLang}`} replace />;
+function App() {
+    return (
+        <Routes>
+            <Route path="*" element={<GeneralRouter />} />
+        </Routes>
+    );
 }
 
 function AppWrapper() {

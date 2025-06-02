@@ -3,49 +3,54 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
 import Link from './components/Link';
-import ReturnHome from "./components/ReturnHome.jsx";
-import ICMon from './assets/icmon.png';
-import ReCHor from './assets/rechor.png';
+import Return from "./components/Return.jsx";
+import ICMonIMG from './assets/icmon.png';
+import ReCHorIMG from './assets/rechor.png';
+import HashAuditIMG from './assets/HashAudit.jpg';
 
 function Projects() {
     const { t } = useTranslation();
     return (
         <>
-            <LanguageSelector />
-            <ReturnHome />
+            <div className="Page">
+                <header className="Header">
+                    <Return />
+                    <div className="Title">{t('mPR')}</div>
+                    <LanguageSelector />
+                </header>
+                <main className="ProjectsContent">
+                    <Link
+                        display={
+                            <article className="ProjectCard">
+                                <img src={ReCHorIMG} alt="ReCHor" />
+                                <h1>ReCHor</h1>
+                                <p>{t('desReCHor')}</p>
+                            </article>}
+                        url={'/projects/rechor'}
+                    />
 
-            <header className="Title">{t('mPR')}</header>
-            <main className="ProjectsContent">
-                <Link
-                    display={
-                    <article className="ProjectCard">
-                        <img src={ReCHor} alt="ReCHor" />
-                        <h1>ReCHor</h1>
-                        <p>{t('desReCHor')}</p>
-                    </article>}
-                    url={'https://github.com/dryk875'}
-                />
 
+                    <Link
+                        display={
+                            <article className="ProjectCard">
+                                <img src={HashAuditIMG} alt="HashAudit" />
+                                <h1>HashAudit</h1>
+                                <p>{t('desHashAudit')}</p>
+                            </article>}
+                        url={'/projects/hashaudit'}
+                    />
 
-                <Link
-                    display={
-                    <article className="ProjectCard">
-                        <h1>HashAudit</h1>
-                        <p>{t('desHashAudit')}</p>
-                    </article>}
-                    url={'https://github.com/dryk875'}
-                />
-
-                <Link
-                    display={
-                    <article className="ProjectCard">
-                        <img src={ICMon} alt="ICMon" />
-                        <h1>ICMon</h1>
-                        <p>{t('desICMon')}</p>
-                    </article>}
-                    url={'https://github.com/dryk875'}
-                />
-            </main>
+                    <Link
+                        display={
+                            <article className="ProjectCard">
+                                <img src={ICMonIMG} alt="ICMon" />
+                                <h1>ICMon</h1>
+                                <p>{t('desICMon')}</p>
+                            </article>}
+                        url={'/projects/icmon'}
+                    />
+                </main>
+            </div>
         </>
     );
 }

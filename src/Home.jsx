@@ -4,12 +4,15 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './components/LanguageSelector';
 import Link from './components/Link';
+import Return from "./components/Return.jsx";
 
 function Home() {
     const { t } = useTranslation();
     return (
         <>
-            <LanguageSelector />
+            <header className="Header">
+                <LanguageSelector />
+            </header>
             <main className="Layout">
                 <div className="HomeContent">
                     <div className='Name'>Damien<br/>de Ryck</div>

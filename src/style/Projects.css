@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    flex: 1;
     gap: 50px;
+    width: 100%;
 }
 
 .ProjectsContent a:hover {
@@ -16,7 +18,7 @@
     border-radius: 10px;
     padding: 0;
     margin: 10px;
-    width: 500px;
+    width: 25vw;
     box-shadow: 3px 8px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
@@ -47,8 +49,21 @@
     padding-bottom: 20px;
 }
 
-@media (orientation: portrait) {
+@media (max-width: 768px) {
     .ProjectsContent {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        padding: 40px 20px; /* OK */
+    }
+
+    .ProjectCard {
+        width: 80vw;
+    }
+
+    .ProjectCard:hover {
+        transform: none;
     }
 }

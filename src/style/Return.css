@@ -1,0 +1,17 @@
+.return_button {
+    font-size: 2em;
+    background: transparent;
+    cursor: pointer;
+    text-transform: lowercase;
+    text-align: center;
+    display: inline-block;
+    z-index: 10;
+    pointer-events: auto;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    margin-right: auto;
+    margin-left: 1em;
+}
+
+.return_button:active {
+    background: transparent;
+}

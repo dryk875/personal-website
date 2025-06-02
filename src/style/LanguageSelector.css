@@ -1,15 +1,15 @@
 .language-selector {
-    position: absolute;
-    top: 2vh;
-    right: 2vw;
     display: inline-block;
     z-index: 10;
     pointer-events: auto;
+    margin-left: auto;
+    margin-right: 2em;
+    position: relative;
+    text-align: center;
 }
 
 .language-button {
     font-size: 2em;
-    /*border: 1px solid #111;*/
     cursor: pointer;
     text-transform: lowercase;
     text-align: center;
@@ -20,7 +20,6 @@
     text-align: center;
     width: 100%;
     font-size: 2em;
-    /*border: 1px solid #ccc;*/
     border: none;
     position: absolute;
     z-index: 10;
