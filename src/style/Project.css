@@ -1,0 +1,15 @@
+.Game {
+    width: 1080px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Game iframe {
+    width: 600px;
+    height: 600px;
+    border: none;
+
+    border-radius: 20px;
+}

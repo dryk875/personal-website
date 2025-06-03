@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>ICMon - CheerpJ Wrapper</title>
+  <script src="https://cjrtnc.leaningtech.com/4.1/loader.js"></script>
+</head>
+
+<body>
+<script type="module">
+  await cheerpjInit({version: 17, disableFonts: true,
+    disableAudio: true});
+  cheerpjCreateDisplay(550, 550, document.getElementById("container"));
+  await cheerpjRunJar("/app/icmon.jar");
+</script>
+</body>
+</html>
