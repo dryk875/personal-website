@@ -19,15 +19,16 @@ function Projects() {
                     <LanguageSelector />
                 </header>
                 <main className="ProjectsContent">
-                    <Link
-                        display={
+                    {/*<Link*/}
+                    {/*    display={*/}
                             <article className="ProjectCard">
                                 <img src={ReCHorIMG} alt="ReCHor" />
                                 <h1>ReCHor</h1>
                                 <p>{t('desReCHor')}</p>
-                            </article>}
-                        url={'/projects/rechor'}
-                    />
+                            </article>
+                    {/*}*/}
+                    {/*    url={'/projects/rechor'}*/}
+                    {/*/>*/}
 
                     <article className="ProjectCard">
                         <img src={HashAuditIMG} alt="HashAudit" />
@@ -35,15 +36,16 @@ function Projects() {
                         <p>{t('desHashAudit')}</p>
                     </article>
 
-                    <Link
-                        display={
+                    {/*<Link*/}
+                    {/*    display={*/}
                             <article className="ProjectCard">
                                 <img src={ICMonIMG} alt="ICMon" />
                                 <h1>ICMon</h1>
                                 <p>{t('desICMon')}</p>
-                            </article>}
-                        url={'/projects/icmon'}
-                    />
+                            </article>
+                    {/*}*/}
+                    {/*    url={'/projects/icmon'}*/}
+                    {/*/>*/}
                 </main>
             </div>
         </>
