@@ -14,7 +14,7 @@ function Home() {
             </header>
             <main className="Layout">
                 <div className="HomeContent">
-                    <div className='Name'>Damien<br/>de Ryck</div>
+                    <div className='Name'>TEST<br/>de Ryck</div>
                     <div className="position">{t('position')}<Link display="EPFL" url={t('EPFLLink')} /></div>
                     <div className="links">
                         <Link display={t('mEM')} url={'mailto:deryckdamien@gmail.com'} />
