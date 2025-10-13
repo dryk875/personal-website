@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import CV_En from './assets/cv_damien_de_ryck_en.pdf';
-import CV_Fr from './public/cv-fr.pdf';
+import CV_Fr from './../public/cv-fr.pdf';
 
 const resources = {
     en: {
