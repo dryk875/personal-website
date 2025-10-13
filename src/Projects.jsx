@@ -6,7 +6,7 @@ import Link from './components/Link';
 import Return from "./components/Return.jsx";
 import ICMonIMG from './assets/icmon.png';
 import ReCHorIMG from './assets/rechor.png';
-import HashAuditIMG from './assets/HashAudit.jpg';
+import HashAuditIMG from './assets/hashaudit.jpg';
 
 function Projects() {
     const { t } = useTranslation();
