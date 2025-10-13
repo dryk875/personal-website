@@ -1,7 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import CV_En from './assets/cv_damien_de_ryck_en.pdf';
-import CV_Fr from './../public/cv-fr.pdf';
 
 const resources = {
     en: {
@@ -32,7 +31,7 @@ const resources = {
             "pNF": "Page non trouvée",
             "rHome": "Retourner à la page d'accueil",
             "linkedin_link": "https://www.linkedin.com/in/damien-deryck/?locale=fr_FR",
-            "CV": CV_Fr,
+            "CV": "cv-fr.pdf",
             "position": "Étudiant en informatique à l'",
             "EPFLLink": "https://www.epfl.ch/fr",
             "mEM": "mon email",
